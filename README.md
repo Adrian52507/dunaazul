@@ -39,7 +39,6 @@ Busca `[CONFIRMAR]` en `index.html`:
 - Si se incluyen o no **toallas** y artículos básicos de baño (aparece en "No incluye" y en la FAQ).
 - Política de **fumar** (Airbnb dice "apto para fumadores"; ¿solo en exteriores?). Hoy no se muestra.
 - **Velocidad del Starlink** en Mbps para la FAQ de trabajo remoto.
-- Foto del **tercer dormitorio** (busca `TODO`); por ahora hay una tarjeta ilustrada.
 
 ## Textos
 
