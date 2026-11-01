@@ -9,7 +9,7 @@ const CONFIG = {
   polycam: {                // URL de embed de Polycam por espacio. Vacío = estado "próximamente"
     sala: "", cocina: "", dormitorio1: "", dormitorio2: "", dormitorio3: "", terraza: ""
   },
-  hostPhoto: "",            // ej. "assets/img/manuel.webp" — vacío = círculo con la inicial "M"
+  hostPhoto: "assets/img/manuel.webp",  // vacío = círculo con la inicial "M"
   priceFrom: "1,400",       // soles, aprox., por 2 noches
 };
 
