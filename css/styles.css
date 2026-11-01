@@ -25,11 +25,13 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* Safari 26 (iOS/macOS) ignora <meta theme-color> y tiñe el notch/barras
+   con el fondo de html/body: lo dejamos en azul noche y el crema vive en <main>. */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--noche); }
 
 body {
   margin: 0;
-  background: var(--blanco-cal);
+  background: var(--noche);
   color: var(--azul-noche);
   font-family: var(--sans);
   font-size: 16px;
@@ -39,6 +41,8 @@ body {
   overflow-x: hidden;
 }
 @supports (overflow: clip) { body { overflow-x: clip; } }
+
+main { display: block; background: var(--blanco-cal); }
 
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
