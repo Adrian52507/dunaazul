@@ -133,7 +133,7 @@ const CONFIG = {
       "facts.guests": "Guests", "facts.beds": "Bedrooms", "facts.baths": "Bathrooms", "facts.wifi": "Satellite Wi-Fi", "facts.lima": "From Lima · km 44.5 Panamericana Sur",
       "casa.t1": "AN", "casa.t2": "OASIS", "casa.t3": "up high",
       "casa.lead": "Drop your bags — the pool is already waiting. The beach is a 10-minute drive; the calm is right here.",
-      "casa.c1t": "Pool overlooking the bay", "casa.c1d": "With a waterfall and night lighting.",
+      "casa.c1t": "Pool overlooking the bay", "casa.c1d": "With a waterfall and night lighting.", "alt.c1": "Pool overlooking Punta Negra bay at sunset",
       "casa.c2t": "Living room open to the view", "casa.c2d": "Floor-to-ceiling windows.",
       "casa.c3t": "Grill and oven by the water", "casa.c3d": "End the day outdoors.",
       "tour.title": "Take the tour", "tour.sub": "A 60-second walk through every corner.",
