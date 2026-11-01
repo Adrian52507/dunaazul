@@ -32,6 +32,7 @@ const CONFIG = {
     "vista-bahia": [720, 540, 720, 540],
     "bano-01": [1536, 2048, 750, 1000],
     "bano-02": [1536, 2048, 750, 1000],
+    "dormitorio-camarote": [1536, 2048, 750, 1000],
   };
   const dims = (n) => IMG[n] || [2048, 1536, 1000, 750];
   const srcset = (n) => {
@@ -56,6 +57,7 @@ const CONFIG = {
     { n: "vista-bahia", c: "ext", es: "Vista de la bahía de Punta Negra y el mar desde la casa", en: "View of Punta Negra bay and the sea from the house" },
     { n: "dormitorio-camarotes-02", c: "dorm", es: "Dormitorio con dos camarotes de madera", en: "Bedroom with two wooden bunk beds" },
     { n: "dormitorio-camarotes-01", c: "dorm", es: "Dormitorio de camarotes con amplio espacio", en: "Bunk room with plenty of space" },
+    { n: "dormitorio-camarote", c: "dorm", big: true, es: "Dormitorio con un camarote de madera", en: "Bedroom with a wooden bunk bed" },
     { n: "bano-espejo-led", c: "bano", es: "Baño con espejo iluminado LED y lavatorio de cerámica", en: "Bathroom with LED-lit mirror and ceramic basin" },
     { n: "bano-01", c: "bano", tall: true, es: "Baño con ducha, lavatorio sobre encimera y ventana", en: "Bathroom with shower, countertop basin and window" },
     { n: "bano-02", c: "bano", tall: true, es: "Baño con ducha y lavatorio de cerámica blanca", en: "Bathroom with shower and white ceramic basin" },
@@ -208,7 +210,7 @@ const CONFIG = {
       "lb.aria": "Enlarged photo", "lb.close": "Close", "lb.prev": "Previous photo", "lb.next": "Next photo",
     },
   };
-  // Los alt de la galería se reutilizan en otras secciones (alt.g1 … alt.g19)
+  // Los alt de la galería se reutilizan en otras secciones (alt.g1 … alt.g20)
   GALLERY.forEach((g, i) => { I18N.en["alt.g" + (i + 1)] = g.en; });
 
   /* ---------- Idioma ---------- */
@@ -583,8 +585,8 @@ const CONFIG = {
     const grid = $("#galGrid");
     grid.innerHTML = GALLERY.map((g, i) => {
       const [, , w, h] = dims(g.n);
-      const cls = i === 0 ? "big" : g.tall ? "tall" : "";
-      const sizes = i === 0 ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 1024px) 50vw, 25vw";
+      const cls = i === 0 || g.big ? "big" : g.tall ? "tall" : "";
+      const sizes = i === 0 || g.big ? "(max-width: 1024px) 100vw, 50vw" : "(max-width: 1024px) 50vw, 25vw";
       return `<li class="${cls}" data-c="${g.c}"><button type="button" class="gal-item" data-i="${i}">
         <img src="assets/img/${g.n}-sm.webp" srcset="${srcset(g.n)}" sizes="${sizes}" width="${w}" height="${h}" alt="${g[lang]}" loading="lazy" decoding="async">
       </button></li>`;
