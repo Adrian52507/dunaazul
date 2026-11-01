@@ -26,7 +26,9 @@
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <link rel="preload" as="image" href="assets/img/hero-noche.webp"
+  <link rel="preload" as="image" href="assets/img/hero-movil.webp" media="(max-width: 767px)"
+        imagesrcset="assets/img/hero-movil-sm.webp 640w, assets/img/hero-movil.webp 941w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-noche.webp" media="(min-width: 768px)"
         imagesrcset="assets/img/hero-noche-sm.webp 1000w, assets/img/hero-noche.webp 1448w" imagesizes="100vw" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -131,10 +133,14 @@
 <!-- ============ HERO ============ -->
 <section class="hero go-now" id="inicio" aria-labelledby="heroTitle">
   <div class="hero-media" id="heroMedia">
-    <img class="hero-img" src="assets/img/hero-noche.webp"
-         srcset="assets/img/hero-noche-sm.webp 1000w, assets/img/hero-noche.webp 1448w" sizes="100vw"
-         width="1448" height="1086" fetchpriority="high" decoding="async"
-         alt="La casa y su piscina iluminadas de noche" data-i18n-alt="alt.heroImg">
+    <!-- Celular (<768px): foto vertical; tablet y escritorio: foto horizontal -->
+    <picture>
+      <source media="(max-width: 767px)" srcset="assets/img/hero-movil-sm.webp 640w, assets/img/hero-movil.webp 941w" sizes="100vw" width="941" height="1672">
+      <img class="hero-img" src="assets/img/hero-noche.webp"
+           srcset="assets/img/hero-noche-sm.webp 1000w, assets/img/hero-noche.webp 1448w" sizes="100vw"
+           width="1448" height="1086" fetchpriority="high" decoding="async"
+           alt="La casa y su piscina iluminadas de noche" data-i18n-alt="alt.heroImg">
+    </picture>
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="grid-lines grid-lines--anim" aria-hidden="true"><span></span><span></span><span></span><span></span></div>

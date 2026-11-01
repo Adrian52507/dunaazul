@@ -225,6 +225,16 @@ section[id] { scroll-margin-top: 72px; }
   transform: scale(1.02);
   animation: heroIn 4.2s cubic-bezier(.22, .61, .24, 1) .2s both;
 }
+@media (max-width: 767px) {
+  /* Foto vertical: se baja para que la casa quede bajo los textos (se recorta parte del deck de abajo)
+     y su borde superior se funde con el fondo noche */
+  .hero-img {
+    position: relative; top: 22%;
+    object-position: 50% 0;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 18%);
+            mask-image: linear-gradient(180deg, transparent 0, #000 18%);
+  }
+}
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(180deg, rgba(7,13,23,.35) 0%, rgba(7,13,23,0) 30%, rgba(7,13,23,0) 62%, rgba(7,13,23,.8) 100%);
