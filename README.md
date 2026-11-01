@@ -32,14 +32,6 @@ assets/favicon.svg
 
 Con `type: "mp4"`, el mismo video también se reproduce en silencio y en bucle en la tarjeta pequeña del hero.
 
-## Pendientes por confirmar
-
-Busca `[CONFIRMAR]` en `index.html`:
-
-- Si se incluyen o no **toallas** y artículos básicos de baño (aparece en "No incluye" y en la FAQ).
-- Política de **fumar** (Airbnb dice "apto para fumadores"; ¿solo en exteriores?). Hoy no se muestra.
-- **Velocidad del Starlink** en Mbps para la FAQ de trabajo remoto.
-
 ## Textos
 
 El español está escrito en `index.html`; el inglés está en el objeto `I18N.en` de `js/main.js`, con la misma clave que el atributo `data-i18n` del elemento.

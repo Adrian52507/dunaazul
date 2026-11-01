@@ -70,6 +70,7 @@
     <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
     <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-smoke" viewBox="0 0 24 24"><path d="M17 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14"/><path d="M18 8c0-2.5-2-2.5-2-5"/><path d="M21 16a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M22 8c0-2.5-2-2.5-2-5"/><path d="M7 12v4"/></symbol>
     <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
     <symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
     <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
@@ -308,7 +309,7 @@
             <li data-i18n="inc.g1.4">Comedor al aire libre</li>
             <li data-i18n="inc.g1.5">Tumbonas</li>
             <li data-i18n="inc.g1.6">Ducha exterior</li>
-            <li data-i18n="inc.g1.7">Estacionamiento gratuito en la casa</li>
+            <li data-i18n="inc.g1.7">Garaje para unos 3 autos + 1 espacio extra al lado de la casa</li>
           </ul>
         </details>
 
@@ -381,8 +382,6 @@
           <ul class="nolist">
             <li><svg class="ic" width="20" height="20" aria-hidden="true"><use href="#i-shirt"/></svg><span data-i18n="inc.no1">Lavadora ni secadora de ropa</span></li>
             <li><svg class="ic" width="20" height="20" aria-hidden="true"><use href="#i-snow"/></svg><span data-i18n="inc.no2">Aire acondicionado (hay ventiladores)</span></li>
-            <!-- [CONFIRMAR] Toallas y artículos básicos de baño: confirmar con el anfitrión que NO se incluyen -->
-            <li><svg class="ic" width="20" height="20" aria-hidden="true"><use href="#i-bath"/></svg><span data-i18n="inc.no3">Toallas y artículos básicos de baño</span></li>
             <li><svg class="ic" width="20" height="20" aria-hidden="true"><use href="#i-drop"/></svg><span data-i18n="inc.no4">Consumo de agua adicional a la cisterna incluida (lo asume el huésped)</span></li>
             <li><svg class="ic" width="20" height="20" aria-hidden="true"><use href="#i-thermo"/></svg><span data-i18n="inc.no5">Calefacción de la piscina (fuera del verano, el agua está fría)</span></li>
           </ul>
@@ -408,7 +407,7 @@
       <li class="rule rv rv-up" style="--d:.35s"><svg class="ic" width="22" height="22" aria-hidden="true"><use href="#i-mute"/></svg><p data-i18n="rules.r7">No se permiten fiestas ruidosas ni eventos masivos. Las multas del condominio se trasladan al huésped.</p></li>
       <li class="rule rv rv-up" style="--d:.4s"><svg class="ic" width="22" height="22" aria-hidden="true"><use href="#i-wrench"/></svg><p data-i18n="rules.r8">No manipular el cuarto de máquinas de la piscina. La catarata funciona en horario programado; para otro horario, coordina con el anfitrión.</p></li>
       <li class="rule rv rv-up" style="--d:.45s"><svg class="ic" width="22" height="22" aria-hidden="true"><use href="#i-camera"/></svg><p data-i18n="rules.r9">Fotos y grabaciones solo dentro del lote de la casa, no en áreas comunes ni casas vecinas.</p></li>
-      <!-- [CONFIRMAR] Fumar: Airbnb dice "apto para fumadores"; ¿solo en exteriores? Agregar aquí una tarjeta cuando se confirme. -->
+      <li class="rule rv rv-up" style="--d:.5s"><svg class="ic" width="22" height="22" aria-hidden="true"><use href="#i-smoke"/></svg><p data-i18n="rules.r10">Se permite fumar, de preferencia en las zonas exteriores.</p></li>
     </ul>
   </div>
 </section>
@@ -512,12 +511,10 @@
       <details class="acc"><summary><span data-i18n="faq.q3">¿Puedo llevar a mi mascota?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a3">Sí, 1 mascota de raza pequeña.</p></details>
       <details class="acc"><summary><span data-i18n="faq.q4">¿La piscina es temperada?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a4">No. En verano el agua está muy agradable; en invierno, fría.</p></details>
       <details class="acc"><summary><span data-i18n="faq.q5">¿Qué tan lejos está la playa?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a5">Unos 10 minutos en auto, cruzando la Panamericana.</p></details>
-      <!-- [CONFIRMAR Mbps] Agregar la velocidad del Starlink a esta respuesta (ES y EN) cuando se confirme. -->
       <details class="acc"><summary><span data-i18n="faq.q6">¿Puedo trabajar desde la casa?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a6">Sí: hay Wi-Fi satelital Starlink y una mesa de comedor amplia.</p></details>
       <details class="acc"><summary><span data-i18n="faq.q7">¿Hay que avisar quiénes vienen?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a7">Sí. El condominio solo deja pasar a quienes estén en la lista enviada al anfitrión.</p></details>
       <details class="acc"><summary><span data-i18n="faq.q8">¿Se pueden hacer fiestas?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a8">No se permiten fiestas ruidosas ni eventos masivos. Hay horas de silencio del condominio.</p></details>
-      <!-- [CONFIRMAR] Toallas: respuesta provisional, coherente con "No incluye". Confirmar con el anfitrión. -->
-      <details class="acc"><summary><span data-i18n="faq.q9">¿Hay toallas?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a9">Las toallas y los artículos básicos de baño no están incluidos, así que te recomendamos traer los tuyos.</p></details>
+      <details class="acc"><summary><span data-i18n="faq.q9">¿Hay estacionamiento?</span><svg class="ic chev" width="18" height="18" aria-hidden="true"><use href="#i-down"/></svg></summary><p data-i18n="faq.a9">Sí. La casa tiene garaje para unos 3 autos y se puede estacionar 1 más al lado de la casa, sin costo.</p></details>
     </div>
   </div>
 </section>
