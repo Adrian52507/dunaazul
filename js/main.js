@@ -29,7 +29,7 @@ const CONFIG = {
     "piscina-vista-mar": [1200, 900, 1000, 750],
     "piscina-dia": [1200, 800, 1000, 667],
     "terraza-parrilla": [720, 540, 720, 540],
-    "vista-bahia": [720, 540, 720, 540],
+    "vista-bahia": [1440, 1080, 1000, 750],
     "bano-01": [1536, 2048, 750, 1000],
     "bano-02": [1536, 2048, 750, 1000],
     "dormitorio-camarote": [1536, 2048, 750, 1000],
