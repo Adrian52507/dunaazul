@@ -5,7 +5,11 @@
 const CONFIG = {
   airbnbUrl: "https://www.airbnb.com/h/dunaazul",
   tiktokUrl: "https://www.tiktok.com/@dunaazul.pe",  // si está vacío, se oculta el enlace
-  houseTour: { type: "", src: "" },   // type: "mp4" | "youtube" | "tiktok"; src: ruta o ID. Vacío = estado "próximamente"
+  houseTour: {              // type: "mp4" | "youtube" | "tiktok"; src: ruta o ID. Vacío = estado "próximamente"
+    type: "mp4",
+    src: "assets/video/house-tour.mp4",        // 1080p con audio (sección "Recorre la casa")
+    mini: "assets/video/house-tour-mini.mp4",  // 640px sin audio (tarjeta del hero)
+  },
   polycam: {                // URL de embed de Polycam por espacio. Vacío = estado "próximamente"
     sala: "", cocina: "",
     dormitorio1: "walk.html?m=assets/3d/principal.glb&s=2",
@@ -140,7 +144,7 @@ const CONFIG = {
       "casa.c1t": "Pool overlooking the bay", "casa.c1d": "With a waterfall and night lighting.", "alt.c1": "Pool overlooking Punta Negra bay at sunset",
       "casa.c2t": "Living room open to the view", "casa.c2d": "Floor-to-ceiling windows.",
       "casa.c3t": "Grill and oven by the water", "casa.c3d": "End the day outdoors.",
-      "tour.title": "Take the tour", "tour.sub": "A 60-second walk through every corner.",
+      "tour.title": "Take the tour", "tour.sub": "A one-minute walk through every corner.",
       "player.soon": "Filming · coming soon", "player.follow": "Follow us on TikTok", "player.play": "Play the house tour",
       "t360.title": "Step into every room", "t360.sub": "Look around in 360°, as if you were already there.", "t360.tabs": "Spaces",
       "t360.btn": "View in 360°", "t360.soon": "360° coming soon", "t360.frame": "360° tour",
@@ -451,7 +455,7 @@ const CONFIG = {
       v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
       v.preload = "auto";
       v.poster = "assets/img/piscina-dia-sm.webp";
-      v.src = CONFIG.houseTour.src;
+      v.src = CONFIG.houseTour.mini || CONFIG.houseTour.src;
       box.appendChild(v);
 
       // Que no se detenga nunca
@@ -508,7 +512,7 @@ const CONFIG = {
     el.classList.toggle("is-vertical", type === "tiktok");
 
     if (type === "mp4" && src) {
-      el.innerHTML = `<video controls playsinline preload="none" poster="assets/img/piscina-noche.webp" src="${src}"></video>`;
+      el.innerHTML = `<video controls playsinline preload="metadata" poster="assets/img/piscina-noche.webp" src="${src}" title="House tour"></video>`;
       playerStarted = true;
       return;
     }
