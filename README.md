@@ -35,3 +35,13 @@ Con `type: "mp4"`, el mismo video también se reproduce en silencio y en bucle e
 ## Textos
 
 El español está escrito en `index.html`; el inglés está en el objeto `I18N.en` de `js/main.js`, con la misma clave que el atributo `data-i18n` del elemento.
+
+## Recorrido 3D propio (`walk.html`)
+
+Para ver un escaneo de Polycam en primera persona (desde adentro, no como "casa de muñecas"):
+
+1. Exporta la captura desde Polycam como **glTF/GLB**.
+2. Comprímela y guárdala en `assets/3d/`, por ejemplo con `npx @gltf-transform/cli optimize entrada.glb assets/3d/nombre.glb --compress meshopt --texture-compress webp`.
+3. En `CONFIG.polycam`, pon `"walk.html?m=assets/3d/nombre.glb&s=1"` en el espacio que corresponda. `s` (0–3) elige junto a qué pared arranca la cámara, mirando al centro.
+
+Controles: arrastrar para mirar; joystick en celular; WASD o flechas en computadora.

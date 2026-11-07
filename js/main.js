@@ -8,7 +8,7 @@ const CONFIG = {
   houseTour: { type: "", src: "" },   // type: "mp4" | "youtube" | "tiktok"; src: ruta o ID. Vacío = estado "próximamente"
   polycam: {                // URL de embed de Polycam por espacio. Vacío = estado "próximamente"
     sala: "", cocina: "", dormitorio1: "",
-    dormitorio2: "https://poly.cam/capture/88C37879-ED02-43A7-A7B6-499A19DB0F75/embed",
+    dormitorio2: "walk.html?m=assets/3d/camarotes.glb&s=1",   // recorrido propio (antes: embed de Polycam 88C37879-…)
     dormitorio3: "", terraza: ""
   },
   hostPhoto: "assets/img/manuel.webp",  // vacío = círculo con la inicial "M"
