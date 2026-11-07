@@ -7,7 +7,9 @@ const CONFIG = {
   tiktokUrl: "https://www.tiktok.com/@dunaazul.pe",  // si está vacío, se oculta el enlace
   houseTour: { type: "", src: "" },   // type: "mp4" | "youtube" | "tiktok"; src: ruta o ID. Vacío = estado "próximamente"
   polycam: {                // URL de embed de Polycam por espacio. Vacío = estado "próximamente"
-    sala: "", cocina: "", dormitorio1: "", dormitorio2: "", dormitorio3: "", terraza: ""
+    sala: "", cocina: "", dormitorio1: "",
+    dormitorio2: "https://poly.cam/capture/88C37879-ED02-43A7-A7B6-499A19DB0F75/embed",
+    dormitorio3: "", terraza: ""
   },
   hostPhoto: "assets/img/manuel.webp",  // vacío = círculo con la inicial "M"
   priceFrom: "1,400",       // soles, aprox., por 2 noches
@@ -76,7 +78,7 @@ const CONFIG = {
     { key: "dormitorio2", img: "dormitorio-camarotes-02",
       es: ["Dormitorio de camarotes", "<strong>2 camarotes.</strong> Ideal para chicos o grupos de amigos."],
       en: ["Bunk room", "<strong>2 bunk beds.</strong> Great for kids or groups of friends."] },
-    { key: "dormitorio3", img: "dormitorio-camarotes-01",
+    { key: "dormitorio3", img: "dormitorio-camarote", pos: "50% 45%",
       es: ["Tercer dormitorio", "<strong>1 camarote.</strong>"],
       en: ["Third bedroom", "<strong>1 bunk bed.</strong>"] },
     { key: "terraza", img: "piscina-dia",
@@ -542,7 +544,7 @@ const CONFIG = {
     const url = CONFIG.polycam[s.key];
     const [, , w, h] = dims(s.img);
     v.setAttribute("aria-labelledby", "tab-" + s.key);
-    v.innerHTML = `<img src="assets/img/${s.img}-sm.webp" srcset="${srcset(s.img)}" sizes="(max-width: 1360px) 100vw, 1300px" width="${w}" height="${h}" alt="${GALLERY.find((g) => g.n === s.img)[lang]}" loading="lazy" decoding="async">
+    v.innerHTML = `<img src="assets/img/${s.img}-sm.webp" srcset="${srcset(s.img)}" sizes="(max-width: 1360px) 100vw, 1300px" width="${w}" height="${h}"${s.pos ? ` style="object-position: ${s.pos}"` : ""} alt="${GALLERY.find((g) => g.n === s.img)[lang]}" loading="lazy" decoding="async">
       <div class="shade"></div>
       <div class="v-center">${url
         ? `<button type="button" class="btn-360"><svg class="ic" width="22" height="22" aria-hidden="true"><use href="#i-360"/></svg>${t("t360.btn")}</button>`
