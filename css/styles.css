@@ -154,7 +154,7 @@ section[id] { scroll-margin-top: 72px; }
   font-size: 13px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap;
   transition: background-color .25s, color .25s;
 }
-.btn-reserve:hover { background: #fff; color: var(--azul-piscina); }
+.btn-reserve:hover { background: var(--blanco-cal); color: var(--azul-noche); }
 
 .burger {
   display: none; place-items: center; width: 44px; height: 44px; border-radius: 50%;
@@ -428,7 +428,7 @@ section[id] { scroll-margin-top: 72px; }
 .play {
   position: absolute; left: 50%; top: 50%; z-index: 2; transform: translate(-50%, -50%);
   display: grid; place-items: center; width: clamp(64px, 7vw, 96px); aspect-ratio: 1; border-radius: 50%;
-  background: var(--azul-piscina); color: #fff;
+  background: var(--blanco-cal); color: var(--azul-noche);
   box-shadow: 0 10px 40px rgba(7, 13, 23, .4);
   transition: transform .3s var(--ease);
 }
@@ -754,12 +754,12 @@ body.no-scroll { overflow: hidden; }
 .btn-main {
   display: inline-flex; align-items: center; gap: 12px; margin-top: 32px;
   min-height: 60px; padding: 14px 30px; border-radius: 999px;
-  background: var(--azul-piscina); color: #fff;
+  background: var(--blanco-cal); color: var(--azul-noche);
   font-size: 19px; font-weight: 700; letter-spacing: -.01em;
-  box-shadow: 0 14px 40px rgba(30, 143, 203, .35);
-  transition: transform .3s var(--ease), box-shadow .3s, filter .3s;
+  box-shadow: 0 14px 40px rgba(7, 13, 23, .35);
+  transition: transform .3s var(--ease), box-shadow .3s, background-color .3s;
 }
-.btn-main:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 18px 50px rgba(30, 143, 203, .45); }
+.btn-main:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 18px 50px rgba(7, 13, 23, .45); }
 .price-trust { display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 14px; opacity: .85; }
 
 /* =========================================================
@@ -805,8 +805,12 @@ body.no-scroll { overflow: hidden; }
   .mcta p { font-size: 15px; font-weight: 500; line-height: 1.2; }
   .mcta-btn {
     display: inline-flex; align-items: center; height: 48px; padding: 0 24px; border-radius: 999px;
-    background: var(--azul-piscina); color: #fff; font-size: 18px; font-weight: 700;
+    background: var(--azul-noche); color: var(--blanco-cal); font-size: 18px; font-weight: 700;
   }
+  /* Botón 360 más compacto en celular */
+  .btn-360 { height: 44px; gap: 10px; padding: 0 18px 0 6px; font-size: 15px; }
+  .btn-360 .ic-wrap { width: 32px; height: 32px; }
+  .btn-360 .ic { width: 17px; height: 17px; }
 }
 
 /* =========================================================
