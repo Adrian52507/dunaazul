@@ -10,7 +10,8 @@ const CONFIG = {
     sala: "", cocina: "",
     dormitorio1: "walk.html?m=assets/3d/principal.glb&s=2",
     dormitorio2: "walk.html?m=assets/3d/camarotes.glb&s=0",   // recorrido propio (antes: embed de Polycam 88C37879-…)
-    dormitorio3: "", terraza: ""
+    dormitorio3: "walk.html?m=assets/3d/tercer.glb&s=2",
+    terraza: ""
   },
   hostPhoto: "assets/img/manuel.webp",  // vacío = círculo con la inicial "M"
   priceFrom: "1,400",       // soles, aprox., por 2 noches
