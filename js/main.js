@@ -7,7 +7,8 @@ const CONFIG = {
   tiktokUrl: "https://www.tiktok.com/@dunaazul.pe",  // si está vacío, se oculta el enlace
   houseTour: { type: "", src: "" },   // type: "mp4" | "youtube" | "tiktok"; src: ruta o ID. Vacío = estado "próximamente"
   polycam: {                // URL de embed de Polycam por espacio. Vacío = estado "próximamente"
-    sala: "", cocina: "", dormitorio1: "",
+    sala: "", cocina: "",
+    dormitorio1: "walk.html?m=assets/3d/principal.glb&s=2",
     dormitorio2: "walk.html?m=assets/3d/camarotes.glb&s=0",   // recorrido propio (antes: embed de Polycam 88C37879-…)
     dormitorio3: "", terraza: ""
   },
