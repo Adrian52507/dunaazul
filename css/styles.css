@@ -478,12 +478,25 @@ section[id] { scroll-margin-top: 72px; }
 .viewer > img, .viewer iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
 .viewer .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,13,23,.05), rgba(7,13,23,.45)); }
 .viewer .v-center { position: absolute; inset: 0; display: grid; place-items: center; z-index: 2; }
+/* Botón "Ver en 360°": cristal oscuro sobre la foto, el globo gira una vuelta al pasar/tocar */
 .btn-360 {
-  display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 24px; border-radius: 999px;
-  background: var(--azul-piscina); color: #fff; font-size: 18px; font-weight: 700;
-  box-shadow: 0 10px 40px rgba(7, 13, 23, .35);
+  display: inline-flex; align-items: center; gap: 12px; height: 54px; padding: 0 22px 0 9px; border-radius: 999px;
+  background: rgba(7, 13, 23, .4); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid rgba(245, 242, 235, .55);
+  color: var(--blanco-cal); font-size: 17px; font-weight: 500; letter-spacing: .01em;
+  box-shadow: 0 12px 36px rgba(7, 13, 23, .28);
+  transition: background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
 }
-.btn-360:hover { filter: brightness(1.07); }
+.btn-360 .ic-wrap {
+  display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--blanco-cal); color: var(--azul-noche);
+  transition: background-color .35s var(--ease), color .35s var(--ease);
+}
+.btn-360 .ic { transition: transform .9s var(--ease); }
+.btn-360:hover, .btn-360:focus-visible { background: var(--blanco-cal); color: var(--azul-noche); border-color: var(--blanco-cal); }
+.btn-360:hover .ic-wrap, .btn-360:focus-visible .ic-wrap { background: var(--azul-noche); color: var(--blanco-cal); }
+.btn-360:hover .ic, .btn-360:focus-visible .ic { transform: rotate(360deg); }
+.btn-360:active { transform: scale(.98); }
 .viewer-desc { margin-top: 16px; max-width: 60ch; font-size: 16px; }
 .viewer-desc strong { font-weight: 700; }
 @media (max-width: 860px) { .viewer { aspect-ratio: 4 / 5; } }
@@ -804,4 +817,5 @@ body.no-scroll { overflow: hidden; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .w, .js .rv { opacity: 1 !important; transform: none !important; filter: none !important; }
   .hero-media { transform: none !important; }
+  .btn-360 .ic { transform: none !important; }
 }

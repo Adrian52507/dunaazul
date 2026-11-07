@@ -33,6 +33,10 @@
     .joy-knob { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px;
       border-radius: 50%; background: rgba(245,242,235,.9); box-shadow: 0 2px 10px rgba(0,0,0,.35); }
     .joy.hidden { display: none; }
+    @media (max-width: 860px) {
+      .joy { left: 16px; bottom: 16px; width: 88px; height: 88px; }
+      .joy-knob { width: 36px; height: 36px; margin: -18px 0 0 -18px; }
+    }
   </style>
   <script type="importmap">
     { "imports": {
@@ -144,7 +148,7 @@
     const moveStick = (e) => {
       const r = joy.getBoundingClientRect(), R = r.width / 2;
       let dx = e.clientX - (r.left + R), dy = e.clientY - (r.top + R);
-      const d = Math.hypot(dx, dy), max = R - 14;
+      const d = Math.hypot(dx, dy), max = R - knob.offsetWidth / 2 + 4;
       if (d > max) { dx *= max / d; dy *= max / d; }
       knob.style.transform = `translate(${dx}px, ${dy}px)`;
       stick.x = dx / max; stick.y = dy / max;

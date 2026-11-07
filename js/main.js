@@ -547,7 +547,7 @@ const CONFIG = {
     v.innerHTML = `<img src="assets/img/${s.img}-sm.webp" srcset="${srcset(s.img)}" sizes="(max-width: 1360px) 100vw, 1300px" width="${w}" height="${h}"${s.pos ? ` style="object-position: ${s.pos}"` : ""} alt="${GALLERY.find((g) => g.n === s.img)[lang]}" loading="lazy" decoding="async">
       <div class="shade"></div>
       <div class="v-center">${url
-        ? `<button type="button" class="btn-360"><svg class="ic" width="22" height="22" aria-hidden="true"><use href="#i-360"/></svg>${t("t360.btn")}</button>`
+        ? `<button type="button" class="btn-360"><span class="ic-wrap"><svg class="ic" width="20" height="20" aria-hidden="true"><use href="#i-360"/></svg></span>${t("t360.btn")}</button>`
         : `<span class="chip-soon"><svg class="ic" width="16" height="16" aria-hidden="true"><use href="#i-360"/></svg>${t("t360.soon")}</span>`}</div>`;
     if (url) {
       $(".btn-360", v).addEventListener("click", () => {
