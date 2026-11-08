@@ -27,7 +27,9 @@
 
 /* Safari 26 (iOS/macOS) ignora <meta theme-color> y tiñe el notch/barras
    con el fondo de html/body: lo dejamos en azul noche y el crema vive en <main>. */
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--noche); }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--noche); scrollbar-width: none; }
+/* Barra de desplazamiento de la página oculta (se sigue pudiendo hacer scroll) */
+html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
 body {
   margin: 0;
