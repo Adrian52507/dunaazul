@@ -171,6 +171,7 @@ const CONFIG = {
       "inc.g6.1": "Gated community with 24/7 security", "inc.g6.2": "Cameras only at the outside entrance (none inside the house)", "inc.g6.3": "First aid kit",
       "inc.g7": "Water",
       "inc.g7.1": "A full water tank (9 m³), enough for a normal stay",
+      "inc.g7.tip": "For reference, one person uses on average <strong>150 to 200 litres of water a day</strong>.", "inc.g7.tipAria": "More about water use",
       "inc.no": "Not included",
       "inc.no1": "Washer or dryer", "inc.no2": "Air conditioning (fans are provided)",
       "inc.no4": "Water use beyond the included tank (paid by the guest)", "inc.no5": "Pool heating (outside summer, the water is cold)",
@@ -590,6 +591,24 @@ const CONFIG = {
 
   /* ---------- Galería + lightbox ---------- */
   let galFilter = "all";
+  /* ---------- Botoncitos de información (i) ---------- */
+  function initTips() {
+    const btns = $$(".tip-btn");
+    const close = (b) => { b.setAttribute("aria-expanded", "false"); document.getElementById(b.getAttribute("aria-controls")).hidden = true; };
+    btns.forEach((b) => b.addEventListener("click", (e) => {
+      e.preventDefault(); e.stopPropagation();
+      const open = b.getAttribute("aria-expanded") !== "true";
+      btns.forEach(close);
+      if (open) { b.setAttribute("aria-expanded", "true"); document.getElementById(b.getAttribute("aria-controls")).hidden = false; }
+    }));
+    document.addEventListener("click", (e) => { if (!e.target.closest(".tip")) btns.forEach(close); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      const b = btns.find((x) => x.getAttribute("aria-expanded") === "true");
+      if (b) { close(b); b.focus(); }
+    });
+  }
+
   function initGallery() {
     const grid = $("#galGrid");
     grid.innerHTML = GALLERY.map((g, i) => {
@@ -749,6 +768,7 @@ const CONFIG = {
   initScroll();
   initReveal();
   initTourCard();
+  initTips();
   renderPlayer(true);
   initSpaces();
   initGallery();

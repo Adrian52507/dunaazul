@@ -606,6 +606,22 @@ body.no-scroll { overflow: hidden; }
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat;
 }
+.ticks li.has-tip { display: block; }
+.tip-btn {
+  display: inline-grid; place-items: center; flex: none;
+  width: 22px; height: 22px; margin-left: 2px; vertical-align: -5px; border-radius: 50%;
+  color: var(--azul-piscina); opacity: .8; transition: opacity .2s, background-color .2s;
+  position: relative;
+}
+.tip-btn::after { content: ""; position: absolute; inset: -11px; } /* área táctil de 44px */
+.tip-btn:hover, .tip-btn[aria-expanded="true"] { opacity: 1; background: rgba(30, 143, 203, .12); }
+.tip {
+  margin-top: 8px; padding: 10px 14px; border-radius: 10px;
+  background: var(--blanco-cal); border: 1px solid var(--linea);
+  font-size: 14px; line-height: 1.45; color: var(--azul-noche);
+  animation: tipIn .25s var(--ease) both;
+}
+@keyframes tipIn { from { opacity: 0; transform: translateY(-4px); } }
 .inc-col--no { background: var(--blanco-cal); border-radius: 16px; padding: clamp(18px, 2vw, 28px); }
 .inc-no summary { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2vw, 32px); padding-bottom: 14px; }
 .nolist li .ic { color: var(--teca); margin-top: 1px; }
