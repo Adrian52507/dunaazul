@@ -10,12 +10,10 @@ const CONFIG = {
     src: "assets/video/house-tour.mp4",        // 1080p con audio (sección "Recorre la casa")
     mini: "assets/video/house-tour-mini.mp4",  // 640px sin audio (tarjeta del hero)
   },
-  polycam: {                // URL de embed de Polycam por espacio. Vacío = estado "próximamente"
-    sala: "", cocina: "",
+  polycam: {                // Recorrido 3D por dormitorio (solo cuartos cerrados). Vacío = estado "próximamente"
     dormitorio1: "walk.html?m=assets/3d/principal.glb&s=2",
     dormitorio2: "walk.html?m=assets/3d/camarotes.glb&s=0",   // recorrido propio (antes: embed de Polycam 88C37879-…)
     dormitorio3: "walk.html?m=assets/3d/tercer.glb&s=2",
-    terraza: ""
   },
   hostPhoto: "assets/img/manuel.webp",  // vacío = círculo con la inicial "M"
   priceFrom: "1,400",       // soles, aprox., por 2 noches
@@ -72,12 +70,6 @@ const CONFIG = {
   ];
 
   const SPACES = [
-    { key: "sala", img: "sala-comedor-cocina",
-      es: ["Sala y comedor", "Un solo ambiente abierto: sala, comedor para seis y ventanales hacia el mar."],
-      en: ["Living & dining", "One open space: living room, dining table for six and windows facing the sea."] },
-    { key: "cocina", img: "cocina",
-      es: ["Cocina", "Equipada con barra, horno, microondas y todo lo necesario para cocinar en grupo."],
-      en: ["Kitchen", "Fitted with a bar, oven, microwave and everything you need to cook for a group."] },
     { key: "dormitorio1", img: "dormitorio-principal",
       es: ["Dormitorio principal", "<strong>1 cama matrimonial + 1 sofá cama.</strong> Ventana amplia y ventilador."],
       en: ["Main bedroom", "<strong>1 double bed + 1 sofa bed.</strong> Large window and a fan."] },
@@ -87,9 +79,6 @@ const CONFIG = {
     { key: "dormitorio3", img: "dormitorio-camarote", pos: "50% 45%",
       es: ["Tercer dormitorio", "<strong>1 camarote.</strong>"],
       en: ["Third bedroom", "<strong>1 bunk bed.</strong>"] },
-    { key: "terraza", img: "piscina-dia",
-      es: ["Terraza y piscina", "Piscina privada con catarata, terraza con parrilla y horno, y tumbonas para la tarde."],
-      en: ["Terrace & pool", "Private pool with a waterfall, a terrace with grill and oven, and loungers for the afternoon."] },
   ];
 
   // Reseñas anónimas, siempre en su idioma original
@@ -146,7 +135,7 @@ const CONFIG = {
       "casa.c3t": "Grill and oven by the water", "casa.c3d": "End the day outdoors.",
       "tour.title": "Take the tour", "tour.sub": "A one-minute walk through every corner.",
       "player.soon": "Filming · coming soon", "player.follow": "Follow us on TikTok", "player.play": "Play the house tour",
-      "t360.title": "Step into every room", "t360.sub": "Look around in 360°, as if you were already there.", "t360.tabs": "Spaces",
+      "t360.title": "Step into every bedroom", "t360.sub": "Look around in 360°, as if you were already there.", "t360.tabs": "Bedrooms",
       "t360.btn": "View in 360°", "t360.soon": "360° coming soon", "t360.frame": "360° tour",
       "gal.title": "Gallery", "gal.filter": "Filter photos", "gal.all": "All", "gal.ext": "Outdoors", "gal.sala": "Living & kitchen", "gal.dorm": "Bedrooms", "gal.bano": "Bathrooms",
       "dorm.title": "Bedrooms & beds",

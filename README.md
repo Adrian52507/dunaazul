@@ -26,7 +26,7 @@ assets/favicon.svg
 | `airbnbUrl` | Link del anuncio de Airbnb. Lo usan todos los botones de reserva. | — |
 | `tiktokUrl` | `"https://www.tiktok.com/@dunaazul.pe"` | Se oculta el enlace a TikTok |
 | `houseTour` | `{ type: "mp4", src: "assets/video/tour.mp4" }`, `{ type: "youtube", src: "ID_DEL_VIDEO" }` o `{ type: "tiktok", src: "ID_DEL_VIDEO" }` | Estado "Grabando · muy pronto" y slideshow de fotos en el hero |
-| `polycam.sala`, `cocina`, `dormitorio1`, `dormitorio2`, `dormitorio3`, `terraza` | URL de *embed* de Polycam de cada espacio | Chip "360° muy pronto" |
+| `polycam.dormitorio1`, `dormitorio2`, `dormitorio3` | Recorrido 3D de cada dormitorio (Polycam solo funciona bien en cuartos cerrados) | Chip "360° muy pronto" |
 | `hostPhoto` | `"assets/img/manuel.webp"` (cuadrada, mín. 320 px) | Círculo con la "M" |
 | `priceFrom` | `"1,400"` (soles, aprox., por 2 noches) | — |
 
