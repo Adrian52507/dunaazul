@@ -605,6 +605,7 @@ const CONFIG = {
       galFilter = chip.dataset.f;
       $$("#galFilters .chip").forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
       $$("li", grid).forEach((li) => { li.hidden = galFilter !== "all" && li.dataset.c !== galFilter; });
+      grid.classList.toggle("is-filtered", galFilter !== "all"); // con filtro: fotos del mismo tamaño, sin huecos
     }));
 
     // Lightbox

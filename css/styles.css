@@ -523,6 +523,7 @@ section[id] { scroll-margin-top: 72px; }
 .gal-grid li { min-width: 0; }
 .gal-grid li.big { grid-column: span 2; grid-row: span 2; }
 .gal-grid li.tall { grid-row: span 2; }
+.gal-grid.is-filtered li.big, .gal-grid.is-filtered li.tall { grid-column: auto; grid-row: auto; }
 .gal-item {
   position: relative; display: block; width: 100%; height: 100%;
   border-radius: 12px; overflow: hidden; background: var(--arena);
